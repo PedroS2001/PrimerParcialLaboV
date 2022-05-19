@@ -1,5 +1,6 @@
 package com.example.primerparcial;
 
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,6 +35,19 @@ public class UsuarioAdapter extends RecyclerView.Adapter<UsuarioVH> {
         holder.tvNombre.setText(u.getNombreUsuario());
         holder.tvTipo.setText(u.getTipoUsuario());
 
+        holder.btnEditar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(view.getContext(), EditarUsuarioActivity.class);
+
+                i.putExtra("nombre", holder.tvNombre.getText().toString());
+                i.putExtra("tipo", holder.tvTipo.getText().toString());
+                i.putExtra("indice", holder.getAdapterPosition());
+
+                Log.d("PEDRO", "onClick: ");
+                view.getContext().startActivity(i);
+            }
+        });
         Log.d("SECARGO", u.getNombreUsuario());
     }
 

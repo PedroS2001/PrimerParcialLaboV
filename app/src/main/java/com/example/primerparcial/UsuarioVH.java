@@ -1,6 +1,7 @@
 package com.example.primerparcial;
 
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -11,6 +12,7 @@ public class UsuarioVH extends RecyclerView.ViewHolder {
 
     TextView tvNombre;
     TextView tvTipo;
+    Button btnEditar;
     LinearLayout parentLayout;
 
 
@@ -20,6 +22,9 @@ public class UsuarioVH extends RecyclerView.ViewHolder {
         this.tvNombre = itemView.findViewById(R.id.tvNombreUsuario);
         this.tvTipo = itemView.findViewById(R.id.tvTipoUsuario);
         this.parentLayout = itemView.findViewById(R.id.user_layout);
+        this.btnEditar = itemView.findViewById(R.id.btnEditar);
+
+
     }
 
 }
