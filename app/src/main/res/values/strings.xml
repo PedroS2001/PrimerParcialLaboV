@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">PrimerParcial</string>
+    <string name="password">Constrasena</string>
+    <string name="repeat_password">Repita la contrasena</string>
+    <string name="tipe">Tipo</string>
+    <string name="user">Usuario</string>
+
+    <string name="admin">Administrador</string>
+    <string name="save">Guardar</string>
 </resources>
