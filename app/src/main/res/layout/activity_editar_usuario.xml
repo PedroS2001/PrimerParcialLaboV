@@ -18,6 +18,7 @@
             android:layout_height="wrap_content"
             android:text="@string/user" />
         <EditText
+            android:id="@+id/etNombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="NombreUsuario" />
@@ -33,9 +34,11 @@
             android:layout_height="wrap_content"
             android:text="@string/password" />
         <EditText
+            android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ContraSenia" />
+            android:inputType="textPassword"
+            android:text="" />
     </LinearLayout>
 
     <LinearLayout
@@ -48,9 +51,11 @@
             android:layout_height="wrap_content"
             android:text="@string/repeat_password" />
         <EditText
+            android:id="@+id/etRepeatPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Repita la contrasena" />
+            android:inputType="textPassword"
+            android:text="" />
     </LinearLayout>
 
     <LinearLayout
@@ -74,13 +79,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <RadioGroup
+                android:id="@+id/radioGroupTipo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <RadioButton
+                    android:id="@+id/radioButtonAdmin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/admin" />
                 <RadioButton
+                    android:id="@+id/radioButtonUser"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/user" />

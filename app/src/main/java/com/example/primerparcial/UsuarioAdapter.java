@@ -42,6 +42,7 @@ public class UsuarioAdapter extends RecyclerView.Adapter<UsuarioVH> {
 
                 i.putExtra("nombre", holder.tvNombre.getText().toString());
                 i.putExtra("tipo", holder.tvTipo.getText().toString());
+                i.putExtra("password", listaUsuarios.get(holder.getAdapterPosition()).password);
                 i.putExtra("indice", holder.getAdapterPosition());
 
                 Log.d("PEDRO", "onClick: ");
