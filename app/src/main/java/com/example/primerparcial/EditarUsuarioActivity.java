@@ -81,7 +81,7 @@ public class EditarUsuarioActivity extends AppCompatActivity {
 
 
         ActionBar acbar = super.getSupportActionBar();
-        acbar.setTitle("Primer Parcial");
+        acbar.setTitle("Editar Usuario");
         acbar.setDisplayHomeAsUpEnabled(true);
     }
 
