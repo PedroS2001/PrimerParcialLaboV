@@ -1,6 +1,7 @@
 package com.example.primerparcial;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 
@@ -29,6 +30,10 @@ public class EditarUsuarioController implements View.OnClickListener {
             Log.d("VALIDO", "EDITAR Y FINALIZAR ACTIVITY"+this.u.getIndice());
             this.v.cargarModelo();
             UsuarioAdapter.listaUsuarios.set(this.u.getIndice(), this.v.user);
+
+            Intent i = new Intent();
+            i.putExtra("indice", this.u.getIndice().toString());
+            this.a.setResult(Activity.RESULT_OK, i);
             this.a.finish();
         }
         else{

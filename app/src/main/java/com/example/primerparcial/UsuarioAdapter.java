@@ -1,5 +1,6 @@
 package com.example.primerparcial;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -46,7 +47,8 @@ public class UsuarioAdapter extends RecyclerView.Adapter<UsuarioVH> {
                 i.putExtra("indice", holder.getAdapterPosition());
 
                 Log.d("PEDRO", "onClick: ");
-                view.getContext().startActivity(i);
+                Activity a = (Activity) view.getContext();
+                a.startActivityForResult(i, 1);
             }
         });
         Log.d("SECARGO", u.getNombreUsuario());
