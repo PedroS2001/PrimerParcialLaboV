@@ -5,6 +5,16 @@ public class Usuario {
     String password;
     String tipoUsuario;
 
+    public Integer getIndice() {
+        return indice;
+    }
+
+    public void setIndice(Integer indice) {
+        this.indice = indice;
+    }
+
+    Integer indice;
+
     public Usuario(String nombreUsuario, String password, String tipoUsuario) {
         this.nombreUsuario = nombreUsuario;
         this.password = password;

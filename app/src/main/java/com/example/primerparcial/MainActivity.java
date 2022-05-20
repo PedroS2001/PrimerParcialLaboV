@@ -23,13 +23,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         List<Usuario> usuarios = new ArrayList<>();
-        for(int i=0; i<10; i++)
+        for(int i=0; i<5; i++)
         {
-            usuarios.add(new Usuario("Nombre"+i, "pedro", "Administrador"));
+            usuarios.add(new Usuario("Nombre"+i, "pedro", "administrador"));
         }
-        for(int i=10; i<20; i++)
+        for(int i=5; i<10; i++)
         {
-            usuarios.add(new Usuario("Nombre"+i*2, "Papa", "Usuario"));
+            usuarios.add(new Usuario("Nombre"+i*2, "Papa", "usuario"));
         }
 
         this.usuarioAdapter = new UsuarioAdapter(usuarios);

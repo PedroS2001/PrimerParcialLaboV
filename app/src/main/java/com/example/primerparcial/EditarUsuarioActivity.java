@@ -32,20 +32,23 @@ public class EditarUsuarioActivity extends AppCompatActivity {
         String password = bundle.getString("password", "");
         int indice = bundle.getInt("indice");
 
-        Log.d("IONIDNICICE", ""+indice  );
-        Log.d("IONIDNICICE", ""+password  );
-        Log.d("IONIDNICICE", ""+tipo  );
-        Log.d("IONIDNICICE", ""+nombre);
 
-        this.editNombre = findViewById(R.id.etNombre);
+        Usuario u = new Usuario(nombre, password, tipo);
+        u.setIndice(indice);
+        EditarUsuarioController c =  new EditarUsuarioController(u, this);
+        EditarUsuarioView v = new EditarUsuarioView(this, u, c );
+        c.setView(v);
+
+        v.mostrarModelo();
+        /*this.editNombre = findViewById(R.id.etNombre);
         this.editPassword = findViewById(R.id.etPassword);
         this.editPassword2 = findViewById(R.id.etRepeatPassword);
 
-        this.editNombre.setText(nombre);
+        this.editNombre.setText(nombre);*/
         //this.editPassword.setText(password);
 
 
-        Button guardar = findViewById(R.id.btnGuardar);
+        /*Button guardar = findViewById(R.id.btnGuardar);
         guardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -62,10 +65,10 @@ public class EditarUsuarioActivity extends AppCompatActivity {
                     valorRB = "Usuario";
                 }
 
-                if(validarPassword(pass, pass2) && nombre.length()>3)
+                /*if(validarPassword(pass, pass2) && nombre.length()>3)
                 {
+                    Log.d("VALIDO", "EDITAR Y FINALIZAR ACTIVITY");
                     UsuarioAdapter.listaUsuarios.set(indice, new Usuario(nombre, pass, valorRB));
-                    Log.d("INVALIDO", "EDITAR Y FINALIZAR ACTIVITY");
                     finish();
                 }
                 else{
@@ -73,7 +76,7 @@ public class EditarUsuarioActivity extends AppCompatActivity {
                 }
 
             }
-        });
+        });*/
 
 
 
@@ -82,7 +85,7 @@ public class EditarUsuarioActivity extends AppCompatActivity {
         acbar.setDisplayHomeAsUpEnabled(true);
     }
 
-    private boolean validarPassword(String pass1, String pass2)
+    /*private boolean validarPassword(String pass1, String pass2)
     {
         if(pass1.equals(pass2))
         {
@@ -91,7 +94,7 @@ public class EditarUsuarioActivity extends AppCompatActivity {
         else {
             return false;
         }
-    }
+    }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

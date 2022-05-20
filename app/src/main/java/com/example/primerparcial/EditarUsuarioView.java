@@ -3,6 +3,7 @@ package com.example.primerparcial;
 import android.app.Activity;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -35,7 +36,34 @@ public class EditarUsuarioView {
             this.btnGuardar = this.activity.findViewById(R.id.btnGuardar);
             this.rbAdmin = this.activity.findViewById(R.id.radioButtonAdmin);
             this.rbUsuario = this.activity.findViewById(R.id.radioButtonUser);
-            //btnGuardar.setOnClickListener(controller);
+            btnGuardar.setOnClickListener(controller);
         }
     }
+
+    public void cargarModelo()
+    {
+        String valorRB;
+        if(rbAdmin.isChecked())
+        {
+            valorRB = "administrador";
+        }
+        else{
+            valorRB = "usuario";
+        }
+        this.user.nombreUsuario = this.etNombre.getText().toString();
+        this.user.setPassword(this.etPass.getText().toString());
+        this.user.setTipoUsuario(valorRB);
+    }
+
+    public void mostrarModelo()
+    {
+        this.etNombre.setText(this.user.getNombreUsuario());
+        if( "administrador".equals(this.user.getTipoUsuario()) ){
+            this.rbAdmin.setChecked(true);
+        }else{
+            this.rbUsuario.setChecked(true);
+        }
+    }
+
+
 }
