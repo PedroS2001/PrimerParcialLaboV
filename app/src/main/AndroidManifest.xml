@@ -11,8 +11,7 @@
         android:theme="@style/Theme.PrimerParcial">
         <activity
             android:name=".EditarUsuarioActivity"
-            android:exported="true"
-            android:screenOrientation="portrait"/>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
